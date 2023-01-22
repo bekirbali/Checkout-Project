@@ -1,0 +1,216 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 11rem;
+  border-radius: 0.8rem;
+}
+
+body {
+  background-color: rgba(255, 164, 78, 0.768627451);
+}
+body header {
+  text-align: center;
+}
+body header h1 {
+  font-size: 3rem;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  background-color: rgba(255, 228, 196, 0.61);
+  padding: 1rem;
+  border-radius: 0.7rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 35%;
+  box-shadow: 0 0 1rem 1rem rgba(0, 0, 0, 0.2);
+}
+.container .img {
+  display: flex;
+}
+.container .prices {
+  display: flex;
+  gap: 1rem;
+}
+.container .prices .old-price {
+  text-decoration: line-through;
+  font-size: 1.2rem;
+  color: rgba(0, 0, 0, 0.5803921569);
+}
+.container .prices .new-price {
+  font-size: 1.8rem;
+  color: rgb(221, 158, 0);
+  font-weight: 500;
+}
+.container .fa-minus {
+  background-color: #a5a5a5;
+  padding: 0.3rem;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+.container .fa-plus {
+  background-color: #a5a5a5;
+  padding: 0.3rem;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+.container .counter {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid black;
+  width: 13rem;
+  padding: 0.5rem;
+}
+.container .btn-remove {
+  background-color: crimson;
+  border-radius: 0.4rem;
+  padding: 0.4rem;
+  color: white;
+  border: none;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.container .total-price {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+.container .bag {
+  display: flex;
+  gap: 2rem;
+}
+.container .shoes {
+  display: flex;
+  gap: 2rem;
+}
+.container .clock {
+  display: flex;
+  gap: 2rem;
+}
+.container .removed {
+  display: none;
+}
+.container .total-sum {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.container .total-sum .name {
+  display: flex;
+  width: 5rem;
+  text-align: center;
+  align-items: center;
+}
+.container .total-sum .subtotal {
+  font-size: 1.2rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid black;
+}
+.container .total-sum .tax {
+  font-size: 1.2rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid black;
+}
+.container .total-sum .shipping {
+  font-size: 1.2rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid black;
+}
+.container .total-sum .total {
+  font-size: 1.2rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid black;
+}
+
+@media (max-width: 1100px) {
+  .container {
+    gap: 1rem;
+    width: 50%;
+    align-items: center;
+  }
+  .container .bag {
+    flex-direction: column;
+  }
+  .container .shoes {
+    flex-direction: column;
+  }
+  .container .clock {
+    flex-direction: column;
+  }
+  .container .total-sum {
+    border-radius: 10px;
+    border: 1px solid black;
+    width: 75%;
+    padding: 1rem;
+  }
+  .container .total-sum .subtotal {
+    border: none;
+  }
+  .container .total-sum .tax {
+    border: none;
+  }
+  .container .total-sum .shipping {
+    border: none;
+  }
+  .container .total-sum .total {
+    border: none;
+  }
+}
+@media (max-width: 1310px) {
+  .bag {
+    word-break: normal;
+    align-items: center;
+  }
+  .bag .img img {
+    width: 7rem;
+  }
+  .bag .text .title h2 {
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+  .shoes {
+    word-break: normal;
+    align-items: center;
+  }
+  .shoes .img img {
+    width: 7rem;
+  }
+  .shoes .text .title h2 {
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+  .clock {
+    word-break: normal;
+    align-items: center;
+  }
+  .clock .img img {
+    width: 7rem;
+  }
+  .clock .text .title h2 {
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+}/*# sourceMappingURL=style.css.map */
