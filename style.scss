@@ -152,41 +152,6 @@ main {
   }
 }
 
-@media (max-width: 1100px) {
-  .container {
-    gap: 1rem;
-    width: 50%;
-    align-items: center;
-    .bag {
-      flex-direction: column;
-    }
-    .shoes {
-      flex-direction: column;
-    }
-    .clock {
-      flex-direction: column;
-    }
-    .total-sum {
-      border-radius: 10px;
-      border: 1px solid black;
-      width: 75%;
-      padding: 1rem;
-      .subtotal {
-        border: none;
-      }
-      .tax {
-        border: none;
-      }
-      .shipping {
-        border: none;
-      }
-      .total {
-        border: none;
-      }
-    }
-  }
-}
-
 @media (max-width: 1310px) {
   .bag {
     word-break: normal;
@@ -236,6 +201,80 @@ main {
           font-size: 1.2rem;
           font-weight: 700;
         }
+      }
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .container {
+    gap: 1rem;
+    width: 50%;
+    align-items: center;
+    .bag {
+      flex-direction: column;
+    }
+    .shoes {
+      flex-direction: column;
+    }
+    .clock {
+      flex-direction: column;
+    }
+    .total-sum {
+      border-radius: 10px;
+      border: 1px solid black;
+      width: 75%;
+      padding: 1rem;
+      .subtotal {
+        border: none;
+        border-bottom: 1px solid black;
+      }
+      .tax {
+        border: none;
+        border-bottom: 1px solid black;
+      }
+      .shipping {
+        border: none;
+        border-bottom: 1px solid black;
+      }
+      .total {
+        border: none;
+        border-bottom: 1px solid black;
+      }
+    }
+  }
+}
+
+@media (max-width: 648px) {
+  .container {
+    gap: 1rem;
+    width: 50%;
+    align-items: center;
+    .bag {
+      flex-direction: column;
+    }
+    .shoes {
+      flex-direction: column;
+    }
+    .clock {
+      flex-direction: column;
+    }
+    .total-sum {
+      border-radius: 10px;
+      border: 1px solid black;
+      width: 75%;
+      padding: 1rem;
+      .subtotal {
+        border: none;
+      }
+      .tax {
+        border: none;
+      }
+      .shipping {
+        border: none;
+      }
+      .total {
+        border: none;
       }
     }
   }
