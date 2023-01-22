@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-size: 12px;
 }
 
 img {
@@ -17,12 +18,16 @@ body header {
   text-align: center;
 }
 body header h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 main {
   display: flex;
   justify-content: center;
+}
+main h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
 }
 
 .container {
@@ -32,7 +37,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  width: 35%;
+  width: 50%;
   box-shadow: 0 0 1rem 1rem rgba(0, 0, 0, 0.2);
 }
 .container .img {
@@ -48,8 +53,11 @@ main {
   color: rgba(0, 0, 0, 0.5803921569);
 }
 .container .prices .new-price {
-  font-size: 1.8rem;
   color: rgb(221, 158, 0);
+  font-size: 1.6rem;
+}
+.container .prices .new-price span {
+  font-size: 1.6rem;
   font-weight: 500;
 }
 .container .fa-minus {
@@ -70,7 +78,8 @@ main {
   align-items: center;
   border: 1px solid black;
   width: 13rem;
-  padding: 0.5rem;
+  padding: 0.25rem;
+  border-radius: 0.5rem;
 }
 .container .btn-remove {
   background-color: crimson;
@@ -82,6 +91,10 @@ main {
   margin-bottom: 0.5rem;
 }
 .container .total-price {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+.container .total-price span {
   font-size: 1.3rem;
   font-weight: 500;
 }
@@ -185,6 +198,9 @@ main {
     gap: 1rem;
     width: 50%;
     align-items: center;
+  }
+  .container h2 {
+    text-align: center;
   }
   .container .bag {
     flex-direction: column;

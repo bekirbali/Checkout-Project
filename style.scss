@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-size: 12px;
 }
 img {
   width: 11rem;
@@ -15,13 +16,17 @@ body {
   header {
     text-align: center;
     h1 {
-      font-size: 3rem;
+      font-size: 2.5rem;
     }
   }
 }
 main {
   display: flex;
   justify-content: center;
+  h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+  }
 }
 .container {
   background-color: rgba(255, 228, 196, 0.61);
@@ -30,7 +35,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  width: 35%;
+  width: 50%;
   box-shadow: 0 0 1rem 1rem rgba($color: #000000, $alpha: 0.2);
 
   .img {
@@ -47,9 +52,12 @@ main {
       color: #00000094;
     }
     .new-price {
-      font-size: 1.8rem;
       color: rgb(221, 158, 0);
-      font-weight: 500;
+      font-size: 1.6rem;
+      span {
+        font-size: 1.6rem;
+        font-weight: 500;
+      }
     }
   }
 
@@ -72,7 +80,8 @@ main {
     align-items: center;
     border: 1px solid black;
     width: 13rem;
-    padding: 0.5rem;
+    padding: 0.25rem;
+    border-radius: 0.5rem;
   }
 
   .btn-remove {
@@ -88,6 +97,10 @@ main {
   .total-price {
     font-size: 1.3rem;
     font-weight: 500;
+    span {
+      font-size: 1.3rem;
+      font-weight: 500;
+    }
   }
 
   .bag {
@@ -211,6 +224,9 @@ main {
     gap: 1rem;
     width: 50%;
     align-items: center;
+    h2 {
+      text-align: center;
+    }
     .bag {
       flex-direction: column;
     }
