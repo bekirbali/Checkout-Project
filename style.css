@@ -145,40 +145,6 @@ main {
   border-top: 1px solid black;
 }
 
-@media (max-width: 1100px) {
-  .container {
-    gap: 1rem;
-    width: 50%;
-    align-items: center;
-  }
-  .container .bag {
-    flex-direction: column;
-  }
-  .container .shoes {
-    flex-direction: column;
-  }
-  .container .clock {
-    flex-direction: column;
-  }
-  .container .total-sum {
-    border-radius: 10px;
-    border: 1px solid black;
-    width: 75%;
-    padding: 1rem;
-  }
-  .container .total-sum .subtotal {
-    border: none;
-  }
-  .container .total-sum .tax {
-    border: none;
-  }
-  .container .total-sum .shipping {
-    border: none;
-  }
-  .container .total-sum .total {
-    border: none;
-  }
-}
 @media (max-width: 1310px) {
   .bag {
     word-break: normal;
@@ -212,5 +178,77 @@ main {
   .clock .text .title h2 {
     font-size: 1.2rem;
     font-weight: 700;
+  }
+}
+@media (max-width: 1100px) {
+  .container {
+    gap: 1rem;
+    width: 50%;
+    align-items: center;
+  }
+  .container .bag {
+    flex-direction: column;
+  }
+  .container .shoes {
+    flex-direction: column;
+  }
+  .container .clock {
+    flex-direction: column;
+  }
+  .container .total-sum {
+    border-radius: 10px;
+    border: 1px solid black;
+    width: 75%;
+    padding: 1rem;
+  }
+  .container .total-sum .subtotal {
+    border: none;
+    border-bottom: 1px solid black;
+  }
+  .container .total-sum .tax {
+    border: none;
+    border-bottom: 1px solid black;
+  }
+  .container .total-sum .shipping {
+    border: none;
+    border-bottom: 1px solid black;
+  }
+  .container .total-sum .total {
+    border: none;
+    border-bottom: 1px solid black;
+  }
+}
+@media (max-width: 648px) {
+  .container {
+    gap: 1rem;
+    width: 50%;
+    align-items: center;
+  }
+  .container .bag {
+    flex-direction: column;
+  }
+  .container .shoes {
+    flex-direction: column;
+  }
+  .container .clock {
+    flex-direction: column;
+  }
+  .container .total-sum {
+    border-radius: 10px;
+    border: 1px solid black;
+    width: 75%;
+    padding: 1rem;
+  }
+  .container .total-sum .subtotal {
+    border: none;
+  }
+  .container .total-sum .tax {
+    border: none;
+  }
+  .container .total-sum .shipping {
+    border: none;
+  }
+  .container .total-sum .total {
+    border: none;
   }
 }/*# sourceMappingURL=style.css.map */
