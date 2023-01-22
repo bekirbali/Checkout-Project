@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <h1 class="main-title">Checkout</h1>
+    </header>
+    <!-- MAIN DIV -->
+    <main>
+      <!-- MAIN CONTAINER -->
+      <div class="container">
+        <!-- BAG DIV -->
+        <div class="bag">
+          <div class="img">
+            <img src="./assets/img/bag.png" alt="bag" />
+          </div>
+          <div class="text">
+            <div class="title">
+              <h2>Vintage Backpack</h2>
+            </div>
+
+            <!-- BAG PRICES -->
+            <div class="prices">
+              <div class="new-price">$<span id="bag-price">14.99</span></div>
+              <div class="old-price">$26.99</div>
+            </div>
+
+            <!-- BAG COUNTER -->
+            <div class="counter bag-counter">
+              <i class="fa fa-minus"></i><span id="bag-counter-span">0</span
+              ><i class="fa fa-plus"></i>
+            </div>
+            <div class="remove">
+              <button id="bag-remove" class="btn-remove">Remove</button>
+            </div>
+            <div class="total-price">
+              Product Total: $<span id="bag-total">0</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- SHOES DIV -->
+        <div class="shoes">
+          <div class="img">
+            <img src="./assets/img/shoes.png" alt="shoes" />
+          </div>
+          <div class="text">
+            <div class="title">
+              <h2>Levi Shoes</h2>
+            </div>
+
+            <!-- SHOES PRICES -->
+            <div class="prices">
+              <div class="new-price">$<span id="shoes-price">69.99</span></div>
+              <div class="old-price">$89.99</div>
+            </div>
+
+            <!-- SHOES COUNTER -->
+            <div class="counter shoes-counter">
+              <i class="fa fa-minus"></i><span id="shoes-counter-span">0</span
+              ><i class="fa fa-plus"></i>
+            </div>
+            <div class="remove">
+              <button id="shoes-remove" class="btn-remove">Remove</button>
+            </div>
+            <div class="total-price">
+              Product Total: $<span id="shoes-total">0</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CLOCK DIV -->
+        <div class="clock">
+          <div class="img">
+            <img src="./assets/img/clock.jpg" alt="clock" />
+          </div>
+          <div class="text">
+            <div class="title">
+              <h2>Antique Clock</h2>
+            </div>
+
+            <!-- CLOCK PRICES -->
+            <div class="prices">
+              <div class="new-price">$<span id="clock-price">126.99</span></div>
+              <div class="old-price">$167.99</div>
+            </div>
+
+            <!-- CLOCK COUNTER -->
+            <div class="counter clock-counter">
+              <i class="fa fa-minus"></i><span id="clock-counter-span">0</span
+              ><i class="fa fa-plus"></i>
+            </div>
+            <div class="remove">
+              <button id="clock-remove" class="btn-remove">Remove</button>
+            </div>
+            <div class="total-price">
+              Product Total: $<span id="clock-total">0</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- TOTAL SUM DIV -->
+        <div class="total-sum">
+          <!-- SUBTOTAL -->
+          <div class="subtotal">
+            <div class="name">
+              <span>Subtotal</span>
+            </div>
+            <div class="price">$<span id="subtotal-span">0</span></div>
+          </div>
+
+          <!-- TAX -->
+          <div class="tax">
+            <div class="name">
+              <span>Tax(18%)</span>
+            </div>
+            <div class="price">$<span id="tax-span">0</span></div>
+          </div>
+
+          <!-- SHIPPING -->
+          <div class="shipping">
+            <div class="name">
+              <span>Shipping</span>
+            </div>
+            <div class="price">$<span id="shipping-span">15</span></div>
+          </div>
+
+          <!-- TOTAL -->
+          <div class="total">
+            <div class="name">
+              <span>Total</span>
+            </div>
+            <div class="price">$<span id="total-span">0</span></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="main.js"></script>
+  </body>
+</html>
