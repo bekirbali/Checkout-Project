@@ -66,11 +66,17 @@ main h2 {
   border-radius: 5px;
   font-size: 1rem;
 }
+.container .fa-minus:hover {
+  cursor: pointer;
+}
 .container .fa-plus {
   background-color: #a5a5a5;
   padding: 0.3rem;
   border-radius: 5px;
   font-size: 1rem;
+}
+.container .fa-plus:hover {
+  cursor: pointer;
 }
 .container .counter {
   display: flex;

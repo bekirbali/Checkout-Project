@@ -66,12 +66,18 @@ main {
     padding: 0.3rem;
     border-radius: 5px;
     font-size: 1rem;
+    &:hover {
+      cursor: pointer;
+    }
   }
   .fa-plus {
     background-color: #a5a5a5;
     padding: 0.3rem;
     border-radius: 5px;
     font-size: 1rem;
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   .counter {
