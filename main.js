@@ -58,6 +58,9 @@ removeBag.addEventListener("click", (e) => {
     bag.classList.toggle("removed");
     bagTotal.textContent = 0;
     subtotalSum();
+    if (subtotal.innerText == 0) {
+      shipping.innerText = 0;
+    }
     taxSum();
     totalSum();
   }
@@ -69,6 +72,9 @@ removeShoes.addEventListener("click", (e) => {
     shoes.classList.toggle("removed");
     shoesTotal.textContent = 0;
     subtotalSum();
+    if (subtotal.innerText == 0) {
+      shipping.innerText = 0;
+    }
     taxSum();
     totalSum();
   }
@@ -80,6 +86,9 @@ removeClock.addEventListener("click", (e) => {
     clock.classList.toggle("removed");
     clockTotal.textContent = 0;
     subtotalSum();
+    if (subtotal.innerText == 0) {
+      shipping.innerText = 0;
+    }
     taxSum();
     totalSum();
   }
