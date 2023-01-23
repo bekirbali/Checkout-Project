@@ -54,7 +54,13 @@ window.addEventListener("load", () => {
 
 removeBag.addEventListener("click", (e) => {
   e.preventDefault();
-  if (confirm(`${e.target.closest(".text").querySelector("h2").innerText} will be removed`)) {
+  if (
+    confirm(
+      `${
+        e.target.closest(".text").querySelector("h2").innerText
+      } will be removed`
+    )
+  ) {
     bag.classList.toggle("removed");
     bagTotal.textContent = 0;
     subtotalSum();
@@ -68,7 +74,13 @@ removeBag.addEventListener("click", (e) => {
 
 removeShoes.addEventListener("click", (e) => {
   e.preventDefault();
-  if (confirm(`${e.target.closest(".text").querySelector("h2").innerText} will be removed`)) {
+  if (
+    confirm(
+      `${
+        e.target.closest(".text").querySelector("h2").innerText
+      } will be removed`
+    )
+  ) {
     shoes.classList.toggle("removed");
     shoesTotal.textContent = 0;
     subtotalSum();
@@ -82,7 +94,13 @@ removeShoes.addEventListener("click", (e) => {
 
 removeClock.addEventListener("click", (e) => {
   e.preventDefault();
-  if (confirm(`${e.target.closest(".text").querySelector("h2").innerText} will be removed`)) {
+  if (
+    confirm(
+      `${
+        e.target.closest(".text").querySelector("h2").innerText
+      } will be removed`
+    )
+  ) {
     clock.classList.toggle("removed");
     clockTotal.textContent = 0;
     subtotalSum();
@@ -107,12 +125,28 @@ bagCounter.addEventListener("click", (e) => {
     counterBag += 1;
     bagCounterSpan.textContent = counterBag;
   } else if (e.target.classList.contains("fa-minus")) {
-    counterBag > 1 && (counterBag -= 1);
+    counterBag > 0 && (counterBag -= 1);
     bagCounterSpan.textContent = counterBag;
+    if (counterBag == 0) {
+      if (
+        confirm(
+          `${
+            e.target.closest(".text").querySelector("h2").innerText
+          } will be removed`
+        )
+      ) {
+        bag.remove();
+      } else {
+        counterBag += 1;
+        bagCounterSpan.textContent = counterClock;
+      }
+    }
   }
   bagTotalPrice();
   subtotalSum();
-  shipping.textContent = 15;
+  if (subtotal.innerText == 0) {
+    shipping.innerText = 0;
+  }
   taxSum();
   totalSum();
 });
@@ -124,12 +158,28 @@ shoesCounter.addEventListener("click", (e) => {
     counterShoes += 1;
     shoesCounterSpan.textContent = counterShoes;
   } else if (e.target.classList.contains("fa-minus")) {
-    counterShoes > 1 && (counterShoes -= 1);
+    counterShoes > 0 && (counterShoes -= 1);
     shoesCounterSpan.textContent = counterShoes;
+    if (counterShoes == 0) {
+      if (
+        confirm(
+          `${
+            e.target.closest(".text").querySelector("h2").innerText
+          } will be removed`
+        )
+      ) {
+        shoes.remove();
+      } else {
+        counterShoes += 1;
+        shoesCounterSpan.textContent = counterClock;
+      }
+    }
   }
   shoesTotalPrice();
   subtotalSum();
-  shipping.textContent = 15;
+  if (subtotal.innerText == 0) {
+    shipping.innerText = 0;
+  }
   taxSum();
   totalSum();
 });
@@ -141,13 +191,29 @@ clockCounter.addEventListener("click", (e) => {
     counterClock += 1;
     clockCounterSpan.textContent = counterClock;
   } else if (e.target.classList.contains("fa-minus")) {
-    counterClock > 1 && (counterClock -= 1);
+    counterClock > 0 && (counterClock -= 1);
     clockCounterSpan.textContent = counterClock;
+    if (counterClock == 0) {
+      if (
+        confirm(
+          `${
+            e.target.closest(".text").querySelector("h2").innerText
+          } will be removed`
+        )
+      ) {
+        clock.remove();
+      } else {
+        counterClock += 1;
+        clockCounterSpan.textContent = counterClock;
+      }
+    }
   }
 
   clockTotalPrice();
   subtotalSum();
-  shipping.textContent = 15;
+  if (subtotal.innerText == 0) {
+    shipping.innerText = 0;
+  }
   taxSum();
   totalSum();
 });
@@ -167,19 +233,27 @@ const taxSum = () => {
 };
 
 const totalSum = () => {
-  total.textContent = (Number(subtotal.textContent) + Number(tax.textContent) + Number(shipping.textContent)).toFixed(
-    2
-  );
+  total.textContent = (
+    Number(subtotal.textContent) +
+    Number(tax.textContent) +
+    Number(shipping.textContent)
+  ).toFixed(2);
 };
 
 const bagTotalPrice = () => {
-  bagTotal.textContent = (Number(bagPrice.textContent) * Number(bagCounter.textContent)).toFixed(2);
+  bagTotal.textContent = (
+    Number(bagPrice.textContent) * Number(bagCounter.textContent)
+  ).toFixed(2);
 };
 
 const shoesTotalPrice = () => {
-  shoesTotal.textContent = (Number(shoesPrice.textContent) * Number(shoesCounter.textContent)).toFixed(2);
+  shoesTotal.textContent = (
+    Number(shoesPrice.textContent) * Number(shoesCounter.textContent)
+  ).toFixed(2);
 };
 
 const clockTotalPrice = () => {
-  clockTotal.textContent = (Number(clockPrice.textContent) * Number(clockCounter.textContent)).toFixed(2);
+  clockTotal.textContent = (
+    Number(clockPrice.textContent) * Number(clockCounter.textContent)
+  ).toFixed(2);
 };
