@@ -42,7 +42,12 @@ const shipping = document.getElementById("shipping-span");
 const total = document.getElementById("total-span");
 
 window.addEventListener("load", () => {
-  shipping.textContent = 0;
+  bagTotalPrice();
+  shoesTotalPrice();
+  clockTotalPrice();
+  subtotalSum();
+  taxSum();
+  totalSum();
 });
 
 //! REMOVE EVENTS
@@ -90,8 +95,7 @@ bagCounter.addEventListener("click", (e) => {
     counterBag !== 0 && (counterBag -= 1);
     bagCounterSpan.textContent = counterBag;
   }
-  bagTotal.textContent =
-    Number(bagPrice.textContent) * Number(bagCounter.textContent);
+  bagTotalPrice();
   subtotalSum();
   shipping.textContent = 15;
   taxSum();
@@ -108,8 +112,7 @@ shoesCounter.addEventListener("click", (e) => {
     counterShoes !== 0 && (counterShoes -= 1);
     shoesCounterSpan.textContent = counterShoes;
   }
-  shoesTotal.textContent =
-    Number(shoesPrice.textContent) * Number(shoesCounter.textContent);
+  shoesTotalPrice();
   subtotalSum();
   shipping.textContent = 15;
   taxSum();
@@ -126,42 +129,50 @@ clockCounter.addEventListener("click", (e) => {
     counterClock !== 0 && (counterClock -= 1);
     clockCounterSpan.textContent = counterClock;
   }
-  clockTotal.textContent =
-    Number(clockPrice.textContent) * Number(clockCounter.textContent);
 
+  clockTotalPrice();
   subtotalSum();
   shipping.textContent = 15;
   taxSum();
   totalSum();
 });
 
-//* PRODUCT TOTALS
-
-bagTotal.textContent =
-  Number(bagPrice.textContent) * Number(bagCounter.textContent);
-
-shoesTotal.textContent =
-  Number(shoesPrice.textContent) * Number(shoesCounter.textContent);
-
-clockTotal.textContent =
-  Number(clockPrice.textContent) * Number(clockCounter.textContent);
-
 //* GENERAL SUM
 
 const subtotalSum = () => {
-  subtotal.textContent =
+  subtotal.textContent = (
     Number(bagTotal.textContent) +
     Number(shoesTotal.textContent) +
-    Number(clockTotal.textContent);
+    Number(clockTotal.textContent)
+  ).toFixed(2);
 };
 
 const taxSum = () => {
-  tax.textContent = Number(subtotal.textContent) * 0.18;
+  tax.textContent = (Number(subtotal.textContent) * 0.18).toFixed(2);
 };
 
 const totalSum = () => {
-  total.textContent =
+  total.textContent = (
     Number(subtotal.textContent) +
     Number(tax.textContent) +
-    Number(shipping.textContent);
+    Number(shipping.textContent)
+  ).toFixed(2);
+};
+
+const bagTotalPrice = () => {
+  bagTotal.textContent = (
+    Number(bagPrice.textContent) * Number(bagCounter.textContent)
+  ).toFixed(2);
+};
+
+const shoesTotalPrice = () => {
+  shoesTotal.textContent = (
+    Number(shoesPrice.textContent) * Number(shoesCounter.textContent)
+  ).toFixed(2);
+};
+
+const clockTotalPrice = () => {
+  clockTotal.textContent = (
+    Number(clockPrice.textContent) * Number(clockCounter.textContent)
+  ).toFixed(2);
 };
